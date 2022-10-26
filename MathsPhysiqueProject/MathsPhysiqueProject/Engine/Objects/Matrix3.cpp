@@ -1,5 +1,6 @@
 #include "../Headers/Matrix3.h"
 
+
 Matrix3::Matrix3(){
     mat = new float*[3]{new float[3]{0,0,0},new float[3]{0,0,0},new float[3]{0,0,0}};
 }

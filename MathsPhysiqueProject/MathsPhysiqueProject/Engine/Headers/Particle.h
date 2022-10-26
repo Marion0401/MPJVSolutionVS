@@ -11,7 +11,7 @@ protected:
 
 
 public:
-    Particle() default;
+    Particle() = default;
     Particle(float mass, Vector3D position) : mass(mass), position(position){};
     Particle(float mass, Vector3D position, Vector3D velocity) : mass(mass), position(position), velocity(velocity){};
     Particle(float mass, Vector3D position, Vector3D velocity, Vector3D acceleration) : mass(mass),  position(position), velocity(velocity), acceleration(acceleration){};

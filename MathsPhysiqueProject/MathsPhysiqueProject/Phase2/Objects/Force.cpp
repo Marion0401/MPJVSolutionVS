@@ -1,4 +1,5 @@
 #include "../Headers/Force.h"
+#include "../../Engine/Headers/Particle.h"
 
 void Force::setPart(Particle np) 
 { 

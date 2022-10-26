@@ -1,7 +1,7 @@
 #ifndef PROJECTILE_H
 #define PROJECTILE_H
 
-#include "../../../../Engine/src/Headers/Particle.h"
+#include "../../Engine/Headers/Particle.h"
 
 class Projectile : public Particle {
 

@@ -11,7 +11,7 @@ class Force {
 	Particle p;
 
 	public:
-		Force() default;
+		Force() = default;
 		Force(Particle p) : p(p) {}
 		Force(Vector3D v, Particle p) : appliedForce(v), p(p) {}
 

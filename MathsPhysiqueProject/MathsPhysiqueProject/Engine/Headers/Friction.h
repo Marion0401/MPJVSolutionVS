@@ -16,7 +16,7 @@ public:
 	const float getU() { return u; }
 	const float getGconst() { return gconst; }
 
-	void update(Particle particule, float deltatime) override;
+	void update( float deltatime) override;
 
 };
 #endif

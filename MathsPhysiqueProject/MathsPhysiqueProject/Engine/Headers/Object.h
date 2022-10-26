@@ -9,7 +9,7 @@ class Object : public Particle {
 
 protected:
 	std::vector<Force> forces;
-	Force resForce;
+	//Force resForce;
 
 	void updateResForce();
 
@@ -18,7 +18,7 @@ public :
 	Object(Vector3D p) : Particle(p) {};
 
 	std::vector<Force> getForces() { return forces; }
-	Force getResForce() { return resForce; }
+	//Force getResForce() { return resForce; }
 
 	void addForce(Force f);
 	void clearForces();

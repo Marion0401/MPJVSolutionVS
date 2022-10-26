@@ -9,7 +9,7 @@ class Gravity : public Force {
 
 public:
 		
-	Gravity(Particle p) : Force(p, p.getMass()* gconst* Vector3D::Down) {};
+	//Gravity(Particle p) : Force(p, p.getMass()* gconst* Vector3D::down) {};
 
 	void update(float deltatime) override;
 

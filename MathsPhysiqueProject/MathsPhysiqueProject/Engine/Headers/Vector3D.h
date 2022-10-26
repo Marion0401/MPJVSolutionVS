@@ -42,8 +42,8 @@ class Vector3D
     float scalProd ( Vector3D v);
     Vector3D vectProd (Vector3D v);
 
-    Vector3D operator*(Vector3D v, float scal);
-    Vector3D operator*(float scal, Vector3D v);
+    //Vector3D operator*(Vector3D v, float scal);
+    //Vector3D operator*(float scal, Vector3D v);
     Vector3D operator+(const Vector3D& v);
     Vector3D operator-(const Vector3D& v);
     float operator*(Vector3D v);
