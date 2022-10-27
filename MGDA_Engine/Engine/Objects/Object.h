@@ -1,9 +1,10 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-#include "Particle.h"
-#include "Force.h"
 #include <vector>
+
+#include "./Particle.h"
+#include "../Physique/Force.h"
 
 class Object : public Particle {
 

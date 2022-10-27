@@ -1,7 +1,7 @@
 #ifndef CANNONBALL_H
 #define CANNONBALL_H
 
-#include "Projectile.h"
+#include "./Projectile.h"
 
 static float cannonball_radius = 8;
 static float cannonball_mass = 15;

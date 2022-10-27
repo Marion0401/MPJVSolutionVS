@@ -1,8 +1,8 @@
 #ifndef FORCE_H
 #define FORCE_H
 
-#include "Particle.h"
-#include "Vector3D.h"
+#include "../Objects/Particle.h"
+#include "../Math/Vector3D.h"
 
 class Force {
 

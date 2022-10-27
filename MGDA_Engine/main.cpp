@@ -1,8 +1,8 @@
 #include <SFML/Graphics.hpp>
-#include "./src/Headers/Bullet.h"
-#include "./src/Headers/Cannonball.h"
-#include "./src/Headers/Fireball.h"
-#include "./src/Headers/Lazer.h"
+#include "./Game/SimpleShooter/Bullet.h"
+#include "./Game/SimpleShooter/Cannonball.h"
+#include "./Game/SimpleShooter/Fireball.h"
+#include "./Game/SimpleShooter/Lazer.h"
 #include <iostream>
 
 #define CONST_GRAPHIQUE 10

@@ -1,4 +1,4 @@
-#include "../Headers/Friction.h"
+#include "./Friction.h"
 
 
 void Friction::setU(const float U) {

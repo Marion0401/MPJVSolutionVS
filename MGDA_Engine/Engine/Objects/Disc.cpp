@@ -1,4 +1,4 @@
-#include "../Headers/Disc.h"
+#include "./Disc.h"
 
 void Disc::setRadius(float r) {
 	radius = r;

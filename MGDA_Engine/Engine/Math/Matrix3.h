@@ -4,7 +4,7 @@
 #include <iostream>
 #include <math.h>
 
-#include "Vector3D.h"
+#include "./Vector3D.h"
 
 class Matrix3 {
 

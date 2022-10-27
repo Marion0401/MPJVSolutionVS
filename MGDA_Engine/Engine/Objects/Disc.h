@@ -1,7 +1,8 @@
 #ifndef DISC_H
 #define DISC_H
 
-#include "Object.h"
+#include "./Object.h"
+#include "../Math/Vector3D.h"
 
 class Disc : public Object {
 	

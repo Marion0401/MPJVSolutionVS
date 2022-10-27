@@ -1,4 +1,4 @@
-#include "../Headers/Projectile.h"
+#include "./Projectile.h"
 
 float fireball_radius = 5; //in cm
 float fireball_mass = 0.005;  //in kg

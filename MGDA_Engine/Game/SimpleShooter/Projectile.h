@@ -1,7 +1,8 @@
 #ifndef PROJECTILE_H
 #define PROJECTILE_H
 
-#include "../../Engine/Headers/Particle.h"
+#include "../../Engine/Objects/Particle.h"
+#include "../../Engine/Math/Vector3D.h"
 
 class Projectile : public Particle {
 

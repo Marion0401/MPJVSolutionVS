@@ -1,6 +1,7 @@
-#include "../Headers/Spring.h"
 #include <cmath>
-#include "../Headers/Vector3D.h"
+
+#include "./Spring.h"
+#include "../Math/Vector3D.h"
 
 void Spring::setAttachParticle(Particle np) {
 	attachParticle = np;

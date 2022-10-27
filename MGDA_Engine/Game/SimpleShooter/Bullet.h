@@ -1,7 +1,7 @@
 #ifndef BULLET_H
 #define BULLET_H
 
-#include "Projectile.h"
+#include "./Projectile.h"
 
 static float bullet_radius = 0.3;
 static float bullet_mass = 0.040;

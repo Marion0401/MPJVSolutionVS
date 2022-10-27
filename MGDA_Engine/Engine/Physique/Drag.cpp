@@ -1,4 +1,4 @@
-#include "../Headers/Drag.h"
+#include "./Drag.h"
 
 void Drag::setDC(float ndc) 
 {

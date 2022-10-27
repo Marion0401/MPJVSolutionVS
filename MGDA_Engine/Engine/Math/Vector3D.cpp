@@ -1,5 +1,6 @@
-#include "../Headers/Vector3D.h"
 #include <cmath>
+
+#include "./Vector3D.h"
 
 Vector3D::up = Vector3D(0, 0, 1);
 Vector3D::down = Vector3D(0, 0, -1);

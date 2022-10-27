@@ -1,4 +1,4 @@
-#include "../Headers/Force.h"
+#include "./Force.h"
 
 void Force::setPart(Particle np) 
 { 

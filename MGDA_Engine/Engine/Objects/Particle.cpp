@@ -1,4 +1,4 @@
-#include "../Headers/Particle.h"
+#include "./Particle.h"
 
 void Particle::setX(float nx) {
     position.setX(nx);

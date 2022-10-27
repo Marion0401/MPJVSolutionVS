@@ -1,4 +1,4 @@
-#include "../Headers/Gravity.h"
+#include "./Gravity.h"
 
 
 Gravity::gconst = 9.81;

@@ -1,7 +1,7 @@
 #ifndef FRICTION_H
 #define FRICTION_H
 
-#include "Force.h"
+#include "./Force.h"
 
 class Friction : public Force {
 

@@ -1,7 +1,7 @@
 #ifndef Spring_H
 #define Spring_H
 
-#include "Force.h"
+#include "./Force.h"
 
 class Spring : public Force {
 

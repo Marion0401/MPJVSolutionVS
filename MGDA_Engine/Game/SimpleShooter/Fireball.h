@@ -1,7 +1,7 @@
 #ifndef FIREBALL_H
 #define FIREBALL_H
 
-#include "Projectile.h"
+#include "./Projectile.h"
 
     static float fireball_radius = 5; //en cm
     static float fireball_mass = 0.005;  // en kg

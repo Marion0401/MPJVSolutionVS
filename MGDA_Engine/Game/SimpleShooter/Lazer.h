@@ -1,7 +1,7 @@
 #ifndef LAZER_H
 #define LAZER_H
 
-#include "Projectile.h"
+#include "./Projectile.h"
 
 static float lazer_radius = 1;
 static float lazer_mass = 0;
