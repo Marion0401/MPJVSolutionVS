@@ -60,6 +60,12 @@
     <ClCompile Include="Game\SimpleShooter\Projectile.cpp">
       <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Game\SimpleShooter\GameEnvironment.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\glad\src\glad.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\SimpleShooter\Bullet.h">
@@ -103,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="Engine\Physique\Spring.h">
       <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SimpleShooter\GameEnvironment.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
