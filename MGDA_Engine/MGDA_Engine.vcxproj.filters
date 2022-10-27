@@ -30,9 +30,6 @@
     <ClCompile Include="EssaiOpenGL.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Objects\Disc.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Physique\Drag.cpp">
       <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
@@ -49,9 +46,6 @@
       <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Math\Matrix4.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Objects\Object.cpp">
       <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Objects\Particle.cpp">
@@ -86,9 +80,6 @@
     <ClInclude Include="Engine\Math\Vector3D.h">
       <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Objects\Disc.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Physique\Drag.h">
       <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
@@ -105,9 +96,6 @@
       <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Math\Matrix4.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Objects\Object.h">
       <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Objects\Particle.h">

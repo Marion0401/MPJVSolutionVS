@@ -5,7 +5,7 @@
 Matrix4::Matrix4(){
     mat = new float*[4]{new float[4]{0,0,0},new float[4]{0,0,0},new float[4]{0,0,0}, new float[4]{0,0,0}};
 }
-Matrix4::Matrix4(Matrix4& matrice): Matrix4(matrice.getRow(0),matrice.getRow(1),matrice.getRow(2),matrice.getRow(3)){}
+Matrix4::Matrix4(const Matrix4& matrice): Matrix4(matrice.getRow(0),matrice.getRow(1),matrice.getRow(2),matrice.getRow(3)){}
 Matrix4::Matrix4(float a, float b, float c, float d, float e, float f, float g, float h, float i, float j, float k, float l, float m, float n, float o, float p){
     mat = new float*[4]{new float[4]{a,b,c,d},new float[4]{e,f,g,h},new float[4]{i,j,k,l}, new float[4]{m,n,o,p}};
 }

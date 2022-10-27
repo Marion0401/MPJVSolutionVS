@@ -10,7 +10,7 @@ class Object : public Particle {
 
 protected:
 	std::vector<Force> forces;
-	//Force resForce;
+	Force resForce;
 
 	void updateResForce();
 

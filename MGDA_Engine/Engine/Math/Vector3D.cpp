@@ -109,6 +109,13 @@ Vector3D& Vector3D::operator*=(const float f) {
     return *this;
 }
 
+bool Vector3D::operator==(const Vector3D& v) {
+    if (x == v.getX() && y == v.getY() && z == v.getZ())
+        return true;
+    else
+        return false;
+}
+
 std::ostream& operator<<(std::ostream& o, const Vector3D v) {
     o << "x = " << v.getX() << ", y = " << v.getY() << ", z = " << v.getZ() << ", norm = " << v.getNorm() << std::endl;
     return o;

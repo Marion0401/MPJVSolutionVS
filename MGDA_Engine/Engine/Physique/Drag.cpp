@@ -5,8 +5,8 @@ void Drag::setDC(float ndc)
 	dragCoeff = ndc;
 }
 
-void Drag::update(float deltatime) override {
-	v = p.getVelocity().getNorm();
-	appliedForce = -p.getVelocity().normalize * v * v * dragCoeff;
+void Drag::update(float deltatime) {
+	float v = p.getVelocity().getNorm();
+	appliedForce = p.getVelocity().normalize() * (-1) * v * v * dragCoeff;
 }
 

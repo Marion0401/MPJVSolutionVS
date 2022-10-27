@@ -41,6 +41,13 @@ void Particle::integrer(float time) {
     velocity += acceleration*time;
 }
 
+bool Particle::operator==(const Particle& other) {
+    if (mass == other.mass && velocity == other.velocity && position == other.position && acceleration == other.acceleration)
+        return true;
+    else
+        return false;
+}
+
 
 std::ostream& operator<<(std::ostream& o, const Particle p) {
     o << "Mass : " << p.getMass() << std::endl;

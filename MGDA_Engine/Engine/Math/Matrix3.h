@@ -15,7 +15,7 @@ class Matrix3 {
     public:
     
     Matrix3();
-    Matrix3(Matrix3& matrix);
+    Matrix3(const Matrix3& matrix);
     Matrix3(float a, float b, float c, float d, float e, float f, float g, float h, float i);
     Matrix3(float r0[3], float r1[3], float r2[3]); 
     ~Matrix3();

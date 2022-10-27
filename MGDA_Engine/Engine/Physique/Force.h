@@ -21,7 +21,7 @@ class Force {
 		void setPart(Particle p);
 		void setAF(Vector3D v);
 
-		Force operator+(Force f);
+		virtual Force& operator+(Force& f);
 
 		virtual void update(float deltatime) = 0;
 

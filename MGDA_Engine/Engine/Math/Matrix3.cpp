@@ -4,7 +4,7 @@
 Matrix3::Matrix3(){
     mat = new float*[3]{new float[3]{0,0,0},new float[3]{0,0,0},new float[3]{0,0,0}};
 }
-Matrix3::Matrix3(Matrix3& matrix): Matrix3(matrix.getRow(0),matrix.getRow(1),matrix.getRow(2)){}
+Matrix3::Matrix3(const Matrix3& matrix): Matrix3(matrix.getRow(0),matrix.getRow(1),matrix.getRow(2)){}
 Matrix3::Matrix3(float a, float b, float c, float d, float e, float f, float g, float h, float i){
     mat = new float*[3]{new float[3]{a,b,c},new float[3]{d,e,f},new float[3]{g,h,i}};
 }

@@ -48,6 +48,7 @@ class Vector3D
     Vector3D& operator+=(const Vector3D& v);
     Vector3D& operator-=(const Vector3D& v);
     Vector3D& operator*=(const float f);
+    bool operator==(const Vector3D& v);
 };
 
 std::ostream& operator<<(std::ostream& o, const Vector3D v);

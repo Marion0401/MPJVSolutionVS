@@ -22,8 +22,6 @@
     <ClCompile Include="Engine\Math\Matrix3.cpp" />
     <ClCompile Include="Engine\Math\Matrix4.cpp" />
     <ClCompile Include="Engine\Math\Vector3D.cpp" />
-    <ClCompile Include="Engine\Objects\Disc.cpp" />
-    <ClCompile Include="Engine\Objects\Object.cpp" />
     <ClCompile Include="Engine\Objects\Particle.cpp" />
     <ClCompile Include="Engine\Physique\Drag.cpp" />
     <ClCompile Include="Engine\Physique\Force.cpp" />
@@ -37,8 +35,6 @@
     <ClInclude Include="Engine\Math\Matrix3.h" />
     <ClInclude Include="Engine\Math\Matrix4.h" />
     <ClInclude Include="Engine\Math\Vector3D.h" />
-    <ClInclude Include="Engine\Objects\Disc.h" />
-    <ClInclude Include="Engine\Objects\Object.h" />
     <ClInclude Include="Engine\Objects\Particle.h" />
     <ClInclude Include="Engine\Physique\Drag.h" />
     <ClInclude Include="Engine\Physique\Force.h" />
@@ -155,7 +151,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)\Dependencies\glfw-3.3.8-WIN64\lib-vc2019</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
