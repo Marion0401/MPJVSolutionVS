@@ -1,9 +1,9 @@
 #include "./Gravity.h"
 
 
-Gravity::gconst = 9.81;
+float Gravity::gconst = 9.81;
 
-void Gravity::update(float deltatime) override {
-	appliedForce = p.getMass() * gconst * Vector3D::down;
+void Gravity::update(float deltatime) {
+	appliedForce = Vector3D::down * p.getMass() * gconst;
 }
 

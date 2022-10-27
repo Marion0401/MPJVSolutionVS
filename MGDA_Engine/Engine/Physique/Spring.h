@@ -12,7 +12,7 @@ class Spring : public Force {
 	Particle attachParticle;
 
 	public:
-		Spring(const float lo, const float k, float l, Particle particle) : Force(p) {};
+		Spring(const float lo, const float _k, float _l, Particle particle) : Force(p), l0(lo), k(_k), l(_l) {};
 
 		float const getL0() { return l0; }
 		float const getK() { return k; }

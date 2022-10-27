@@ -5,6 +5,12 @@
 
 class Vector3D 
 {
+    float x, y, z;
+    float norm;
+
+    void updateNorm();
+
+    public:
 
     static const Vector3D up;
     static const Vector3D down;
@@ -12,14 +18,6 @@ class Vector3D
     static const Vector3D right;
     static const Vector3D front;
     static const Vector3D back;
-
-
-    float x, y, z;
-    float norm;
-
-    void updateNorm();
-
-    public:
 
     Vector3D();
     Vector3D(float x, float y, float z);
@@ -42,8 +40,7 @@ class Vector3D
     float scalProd ( Vector3D v);
     Vector3D vectProd (Vector3D v);
 
-    //Vector3D operator*(Vector3D v, float scal);
-    //Vector3D operator*(float scal, Vector3D v);
+    Vector3D operator*(float scal) const;
     Vector3D operator+(const Vector3D& v);
     Vector3D operator-(const Vector3D& v);
     float operator*(Vector3D v);

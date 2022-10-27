@@ -7,10 +7,10 @@ void Spring::setAttachParticle(Particle np) {
 	attachParticle = np;
 }
 
-void Spring::update(float deltatime) override {
+void Spring::update(float deltatime) {
 
 	Vector3D springVector = p.getPosition() - attachParticle.getPosition();
 	l = springVector.getNorm();
 
-	appliedForce = -k * (l - l0) * springVector.normalize();
+	appliedForce = springVector.normalize() * (-k) * (1-10);
 }

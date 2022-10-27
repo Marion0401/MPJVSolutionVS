@@ -2,12 +2,12 @@
 
 #include "./Vector3D.h"
 
-Vector3D::up = Vector3D(0, 0, 1);
-Vector3D::down = Vector3D(0, 0, -1);
-Vector3D::left = Vector3D(-1, 0, 0);
-Vector3D::right = Vector3D(1, 0, 0);
-Vector3D::front = Vector3D(0, 1, 0);
-Vector3D::back = Vector3D(0, -1, 0);
+const Vector3D Vector3D::up = Vector3D(0, 0, 1);
+const Vector3D Vector3D::down = Vector3D(0, 0, -1);
+const Vector3D Vector3D::left = Vector3D(-1, 0, 0);
+const Vector3D Vector3D::right = Vector3D(1, 0, 0);
+const Vector3D Vector3D::front = Vector3D(0, 1, 0);
+const Vector3D Vector3D::back = Vector3D(0, -1, 0);
 
 Vector3D::Vector3D(): x(0), y(0), z(0) {
     updateNorm();
@@ -62,12 +62,7 @@ Vector3D Vector3D::vectProd(Vector3D v) {
     return Vector3D(y*v.getZ() - z*v.getY(), z*v.getX() - x*v.getZ(), x*v.getY() - y*v.getX());
 }
 
-Vector3D Vector3D::operator*(Vector3D v, float scal) {
-    Vector3D res = Vector3D(x*scal,y*scal,z*scal);
-    return res;
-}
-
-Vector3D Vector3D::operator*(float scal, Vector3D v) {
+Vector3D Vector3D::operator*(float scal) const {
     Vector3D res = Vector3D(x * scal, y * scal, z * scal);
     return res;
 }

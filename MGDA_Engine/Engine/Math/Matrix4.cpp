@@ -1,6 +1,6 @@
-#include "../Headers/Matrix4.h"
-#include "../Headers/Matrix3.h"
-#include "../Headers/Vector3D.h"
+#include "./Matrix4.h"
+#include "./Matrix3.h"
+#include "./Vector3D.h"
 
 Matrix4::Matrix4(){
     mat = new float*[4]{new float[4]{0,0,0},new float[4]{0,0,0},new float[4]{0,0,0}, new float[4]{0,0,0}};
