@@ -19,8 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Circle.cpp" />
-    <ClCompile Include="Dependencies\glad\src\glad.c" />
     <ClCompile Include="Engine\Math\Matrix3.cpp" />
     <ClCompile Include="Engine\Math\Matrix4.cpp" />
     <ClCompile Include="Engine\Math\Vector3D.cpp" />
@@ -54,7 +52,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{bb271b34-3b14-4d09-a27d-22e002a520f9}</ProjectGuid>
+    <ProjectGuid>{BCBF055E-A9F5-4BCC-985D-63C7E3B26A95}</ProjectGuid>
     <RootNamespace>MGDAEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
