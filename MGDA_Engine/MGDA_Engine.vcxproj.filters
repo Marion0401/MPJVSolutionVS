@@ -66,6 +66,9 @@
     <ClCompile Include="Dependencies\glad\src\glad.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\SimpleShooter\Bullet.h">
