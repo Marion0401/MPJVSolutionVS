@@ -19,8 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Dependencies\glad\src\glad.c" />
-    <ClCompile Include="Engine\Graphics\EngineGFX.cpp" />
     <ClCompile Include="Engine\Math\Matrix3.cpp" />
     <ClCompile Include="Engine\Math\Matrix4.cpp" />
     <ClCompile Include="Engine\Math\Vector3D.cpp" />
@@ -33,10 +31,8 @@
     <ClCompile Include="EssaiOpenGL.cpp" />
     <ClCompile Include="Game\SimpleShooter\GameEnvironment.cpp" />
     <ClCompile Include="Game\SimpleShooter\Projectile.cpp" />
-    <ClCompile Include="Engine\Graphics\ShaderS.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\Graphics\EngineGFX.h" />
     <ClInclude Include="Engine\Math\Matrix3.h" />
     <ClInclude Include="Engine\Math\Matrix4.h" />
     <ClInclude Include="Engine\Math\Vector3D.h" />
@@ -52,7 +48,6 @@
     <ClInclude Include="Game\SimpleShooter\Fireball.h" />
     <ClInclude Include="Game\SimpleShooter\Lazer.h" />
     <ClInclude Include="Game\SimpleShooter\Projectile.h" />
-    <ClInclude Include="Engine\Graphics\ShaderS.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -152,13 +147,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Dependencies\glad\include;$(ProjectDir)\Dependencies\glfw-3.3.8-WIN64\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)\Dependencies\glfw-3.3.8-WIN64\lib-vc2019</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

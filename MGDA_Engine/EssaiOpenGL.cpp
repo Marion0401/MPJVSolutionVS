@@ -1,123 +1,292 @@
-#include "./Engine/Graphics/EngineGFX.h" 
-#include "./Engine/Graphics/ShaderS.h"
+#include <GL/glut.h>
 
-#include <iostream>
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
+#include<iostream>
 
-// settings
-// settings
-unsigned int scrWidth = 800;
-unsigned int scrHeight = 600;
-const char* title = "LearnOpenGL";
-GLuint shaderProgram;
 
-int main()
+using namespace std;
+
+
+int rx = 100, ry = 125;
+
+
+int xCenter = 250, yCenter = 250;
+
+
+
+
+
+void myinit(void)
+
+
 {
-    // glfw: initialize and configure
-    // ------------------------------
-    EngineGFX::initGLFW(3, 3);
-
-    // glfw window creation
-    // --------------------
-    GLFWwindow* window;
-    EngineGFX::createWindow(window, title, scrWidth, scrHeight, framebuffer_size_callback);
-
-    // glad: load all OpenGL function pointers
-    // ---------------------------------------
-    EngineGFX::loadGlad();
-
-    glViewport(0, 0, scrWidth, scrHeight);
-
-    // build and compile our shader program
-    // ------------------------------------
-    shaderProgram = ShaderS::genShaderProgram("./Engine/Shaders/main.vs", "./Engine/Shaders/main.fs");
-    ShaderS::setOrthographicProjection(shaderProgram, 0, scrWidth, 0, scrHeight, 0.0f, 1.0f);
 
 
-    // uncomment this call to draw in wireframe polygons.
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glClearColor(1.0, 1.0, 1.0, 0.0);
 
-    float vertices[] = {
-    -0.5f, -0.5f, 0.0f, // left  
-     0.5f, -0.5f, 0.0f, // right 
-     0.0f,  0.5f, 0.0f  // top   
-    };
 
-    // render loop
-    // -----------
-    while (!glfwWindowShouldClose(window))
+    glMatrixMode(GL_PROJECTION);
+
+
+    glLoadIdentity();
+
+
+    gluOrtho2D(0.0, 640.0, 0.0, 480.0);
+
+
+}
+
+
+
+
+
+void setPixel(GLint x, GLint y)
+
+
+{
+
+
+    glBegin(GL_POINTS);
+
+
+    glVertex2i(x, y);
+
+
+    glEnd();
+
+
+}
+
+
+void ellipseMidPoint()
+
+
+{
+
+
+    float x = 0;
+
+
+    float y = ry;
+
+
+    float p1 = ry * ry - (rx * rx) * ry + (rx * rx) * (0.25);
+
+
+    float dx = 2 * (ry * ry) * x;
+
+
+    float dy = 2 * (rx * rx) * y;
+
+
+    glColor3ub(rand() % 255, rand() % 255, rand() % 255);
+
+
+    while (dx < dy)
+
+
     {
-        // input
-        // -----
-        processInput(window);
 
-        // set up vertex data (and buffer(s)) and configure vertex attributes
-// ------------------------------------------------------------------
 
-        unsigned int VBO, VAO;
-        glGenVertexArrays(1, &VAO);
-        glGenBuffers(1, &VBO);
-        // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-        glBindVertexArray(VAO);
+        setPixel(xCenter + x, yCenter + y);
 
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-        glEnableVertexAttribArray(0);
+        setPixel(xCenter - x, yCenter + y);
 
-        // note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-        // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
-        // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
-        glBindVertexArray(0);
+        setPixel(xCenter + x, yCenter - y);
 
-        // render
-        // ------
-        EngineGFX::clearScreen();
 
-        // draw our first triangle
-        ShaderS::bindShader(shaderProgram);
-        glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        // glBindVertexArray(0); // no need to unbind it every time 
+        setPixel(xCenter - x, yCenter - y);
 
-        // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
-        // -------------------------------------------------------------------------------
-        EngineGFX::newFrame(window);
+
+        if (p1 < 0)
+
+
+        {
+
+
+            x = x + 1;
+
+
+            dx = 2 * (ry * ry) * x;
+
+
+            p1 = p1 + dx + (ry * ry);
+
+
+        }
+
+
+        else
+
+
+        {
+
+
+            x = x + 1;
+
+
+            y = y - 1;
+
+
+            dx = 2 * (ry * ry) * x;
+
+
+            dy = 2 * (rx * rx) * y;
+
+
+            p1 = p1 + dx - dy + (ry * ry);
+
+
+        }
+
 
     }
 
-    // optional: de-allocate all resources once they've outlived their purpose:
-    // ------------------------------------------------------------------------
-    glDeleteProgram(shaderProgram);
 
-    // glfw: terminate, clearing all previously allocated GLFW resources.
-    // ------------------------------------------------------------------
-    EngineGFX::cleanup();
-    return 0;
+    glFlush();
+
+
+
+
+
+    float p2 = (ry * ry) * (x + 0.5) * (x + 0.5) + (rx * rx) * (y
+
+
+        - 1) * (y - 1) - (rx * rx) * (ry * ry);
+
+
+    glColor3ub(rand() % 255, rand() % 255, rand() % 255);
+
+
+    while (y > 0)
+
+
+    {
+
+
+        setPixel(xCenter + x, yCenter + y);
+
+
+        setPixel(xCenter - x, yCenter + y);
+
+
+        setPixel(xCenter + x, yCenter - y);
+
+
+        setPixel(xCenter - x, yCenter - y);
+
+
+        if (p2 > 0)
+
+
+        {
+
+
+            x = x;
+
+
+            y = y - 1;
+
+
+            dy = 2 * (rx * rx) * y;
+
+
+            p2 = p2 - dy + (rx * rx);
+
+
+        }
+
+
+        else
+
+
+        {
+
+
+            x = x + 1;
+
+
+            y = y - 1;
+
+
+            dy = dy - 2 * (rx * rx);
+
+
+            dx = dx + 2 * (ry * ry);
+
+
+            p2 = p2 + dx -
+
+
+                dy + (rx * rx);
+
+
+        }
+
+
+    }
+
+
+    glFlush();
+
+
 }
 
-// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-// ---------------------------------------------------------------------------------------------------------
-void processInput(GLFWwindow* window)
+
+void display()
+
+
 {
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
+
+
+    glClear(GL_COLOR_BUFFER_BIT);
+
+
+    glColor3f(1.0, 0.0, 0.0);
+
+
+    glPointSize(2.0);
+
+
+    ellipseMidPoint();
+
+
+    glFlush();
+
+
 }
 
-// glfw: whenever the window size changed (by OS or user resize) this callback function executes
-// ---------------------------------------------------------------------------------------------
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    // make sure the viewport matches the new window dimensions; note that width and 
-    // height will be significantly larger than specified on retina displays.
-    glViewport(0, 0, width, height);
-    scrWidth = width;
-    scrHeight = height;
 
-    // update projection matrix
-    ShaderS::setOrthographicProjection(shaderProgram, 0, width, 0, height, 0.0f, 1.0f);
+int main(int argc, char** argv)
+
+
+{
+
+
+    glutInit(&argc, argv);
+
+
+    glutInitWindowSize(640, 480);
+
+
+    glutInitWindowPosition(10, 10);
+
+
+    glutCreateWindow("User_Name");
+
+
+    myinit();
+
+
+    glutDisplayFunc(display);
+
+
+    glutMainLoop();
+
+
+    return 0;
+
+
 }
