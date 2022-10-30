@@ -23,7 +23,7 @@ class Force {
 
 		virtual Force& operator+(Force& f);
 
-		virtual void update(float deltatime) = 0;
+		virtual void update(float deltatime);
 
 
 

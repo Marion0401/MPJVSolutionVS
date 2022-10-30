@@ -40,7 +40,6 @@ class Vector3D
     float scalProd ( Vector3D v);
     Vector3D vectProd (Vector3D v);
 
-    Vector3D operator*(float scal) const;
     Vector3D operator+(const Vector3D& v);
     Vector3D operator-(const Vector3D& v);
     float operator*(Vector3D v);
@@ -50,6 +49,11 @@ class Vector3D
     Vector3D& operator*=(const float f);
     bool operator==(const Vector3D& v);
 };
+
+Vector3D operator*(float scal, Vector3D v);
+Vector3D operator*(Vector3D v, float scal);
+Vector3D operator/(float scal, Vector3D v);
+Vector3D operator/(Vector3D v, float scal);
 
 std::ostream& operator<<(std::ostream& o, const Vector3D v);
 

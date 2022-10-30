@@ -10,7 +10,7 @@ class Object : public Particle {
 
 protected:
 	std::vector<Force> forces;
-	Force resForce;
+	Vector3D resForce;
 
 	void updateResForce();
 
@@ -19,7 +19,7 @@ public :
 	Object(Vector3D p) : Particle(p) {};
 
 	std::vector<Force> getForces() { return forces; }
-	//Force getResForce() { return resForce; }
+	Vector3D getResForce() { return resForce; }
 
 	void addForce(Force f);
 	void clearForces();
@@ -27,8 +27,8 @@ public :
 
 	virtual void update(float deltaTime);
 
-	virtual bool intersects(Object o) = 0;
-	virtual float getArea() = 0;
+	virtual bool intersects(Object o);
+	virtual float getArea();
 
 
 };

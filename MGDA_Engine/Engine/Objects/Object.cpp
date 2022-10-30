@@ -1,23 +1,23 @@
 #include "./Object.h"
 
 void Object::updateResForce() {
-	Force res(this);
+	Vector3D res;
 	for each (Force f in forces)
 	{
-		res += f;
+		res += f.getAF();
 	}
 	resForce = res;
 }
 
-virtual void Object::update(float deltaTime) {
+void Object::update(float deltaTime) {
 	for each (Force f in forces)
 	{
 		f.update(deltaTime);
 	}
 	updateResForce();
 
-	acceleration = resForce.getAF() / mass;
-	integrer();
+	acceleration = resForce / mass;
+	integrer(deltaTime);
 }
 
 void Object::addForce(Force f) {

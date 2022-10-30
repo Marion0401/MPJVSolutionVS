@@ -62,11 +62,6 @@ Vector3D Vector3D::vectProd(Vector3D v) {
     return Vector3D(y*v.getZ() - z*v.getY(), z*v.getX() - x*v.getZ(), x*v.getY() - y*v.getX());
 }
 
-Vector3D Vector3D::operator*(float scal) const {
-    Vector3D res = Vector3D(x * scal, y * scal, z * scal);
-    return res;
-}
-
 Vector3D Vector3D::operator+(const Vector3D& v) {
     Vector3D res = Vector3D(x + v.getX(),y + v.getY(),z + v.getZ());
     return res;
@@ -114,6 +109,27 @@ bool Vector3D::operator==(const Vector3D& v) {
         return true;
     else
         return false;
+}
+
+
+Vector3D operator*(float scal, Vector3D v) {
+    Vector3D res = Vector3D(v.getX() * scal, v.getY() * scal, v.getZ() * scal);
+    return res;
+}
+
+Vector3D operator*(Vector3D v, float scal) {
+    Vector3D res = Vector3D(v.getX() * scal, v.getY() * scal, v.getZ() * scal);
+    return res;
+}
+
+Vector3D operator/(float scal, Vector3D v) {
+    Vector3D res = Vector3D(v.getX() / scal, v.getY() / scal, v.getZ() / scal);
+    return res;
+}
+
+Vector3D operator/(Vector3D v, float scal) {
+    Vector3D res = Vector3D(v.getX() / scal, v.getY() / scal, v.getZ() / scal);
+    return res;
 }
 
 std::ostream& operator<<(std::ostream& o, const Vector3D v) {

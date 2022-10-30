@@ -34,6 +34,7 @@ public:
     void setAcceleration(Vector3D newA);
     void setMass(float nMass);
 
+    void move(Vector3D v);
     void addVelocity(Vector3D v);
     void addAcceleration(Vector3D a);
 
