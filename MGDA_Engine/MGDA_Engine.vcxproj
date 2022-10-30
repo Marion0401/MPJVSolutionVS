@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dependencies\glad\src\glad.c" />
+    <ClCompile Include="Engine\Graphics\EngineGFX.cpp" />
     <ClCompile Include="Engine\Math\Matrix3.cpp" />
     <ClCompile Include="Engine\Math\Matrix4.cpp" />
     <ClCompile Include="Engine\Math\Vector3D.cpp" />
@@ -32,8 +33,10 @@
     <ClCompile Include="EssaiOpenGL.cpp" />
     <ClCompile Include="Game\SimpleShooter\GameEnvironment.cpp" />
     <ClCompile Include="Game\SimpleShooter\Projectile.cpp" />
+    <ClCompile Include="Engine\Graphics\ShaderS.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Graphics\EngineGFX.h" />
     <ClInclude Include="Engine\Math\Matrix3.h" />
     <ClInclude Include="Engine\Math\Matrix4.h" />
     <ClInclude Include="Engine\Math\Vector3D.h" />
@@ -49,6 +52,7 @@
     <ClInclude Include="Game\SimpleShooter\Fireball.h" />
     <ClInclude Include="Game\SimpleShooter\Lazer.h" />
     <ClInclude Include="Game\SimpleShooter\Projectile.h" />
+    <ClInclude Include="Engine\Graphics\ShaderS.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

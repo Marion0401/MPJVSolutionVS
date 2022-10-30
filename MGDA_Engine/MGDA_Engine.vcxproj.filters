@@ -25,6 +25,12 @@
     <Filter Include="Fichiers d%27en-tête\Engine">
       <UniqueIdentifier>{5a153ea4-2afc-48b0-99bb-462b7ff71086}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Graphics">
+      <UniqueIdentifier>{aed8db17-3b9d-4b23-8ad9-fb74872520a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Graphics">
+      <UniqueIdentifier>{ce902f0a-2973-4480-9e1a-a72c529bbe2f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EssaiOpenGL.cpp">
@@ -60,11 +66,17 @@
     <ClCompile Include="Game\SimpleShooter\Projectile.cpp">
       <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
-    <ClCompile Include="Game\SimpleShooter\GameEnvironment.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Dependencies\glad\src\glad.c">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\SimpleShooter\GameEnvironment.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Graphics\EngineGFX.cpp">
+      <Filter>Fichiers sources\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Graphics\ShaderS.cpp">
+      <Filter>Fichiers sources\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,8 +122,14 @@
     <ClInclude Include="Engine\Physique\Spring.h">
       <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\Graphics\ShaderS.h">
+      <Filter>Fichiers d%27en-tête\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Graphics\EngineGFX.h">
+      <Filter>Fichiers d%27en-tête\Graphics</Filter>
+    </ClInclude>
     <ClInclude Include="Game\SimpleShooter\GameEnvironment.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
