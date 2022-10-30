@@ -9,5 +9,5 @@ float Disc::getArea() {
 }
 
 bool Disc::intersects(Disc d) {
-	return (position - d.getPosition()).getNorm() < radius + d.getRadius()
+	return (position - d.getPosition()).getNorm() < radius + d.getRadius();
 }

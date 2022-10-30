@@ -28,6 +28,10 @@ void Particle::setMass(float nMass) {
     mass = nMass;
 }
 
+void Particle::move(Vector3D v) {
+    position += v;
+}
+
 void Particle::addVelocity(Vector3D v) {
     velocity += v;
 }
