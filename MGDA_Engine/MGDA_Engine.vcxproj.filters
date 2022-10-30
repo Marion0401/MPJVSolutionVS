@@ -13,57 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Game">
-      <UniqueIdentifier>{66470761-b1f2-4f5e-9b67-62eb6227f6e4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Engine">
-      <UniqueIdentifier>{37796c34-9d74-4d30-bfce-1d1abd69a2e6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Game">
-      <UniqueIdentifier>{82caa9ab-3c7e-46f6-a961-73e9f318baf2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Engine">
-      <UniqueIdentifier>{5a153ea4-2afc-48b0-99bb-462b7ff71086}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EssaiOpenGL.cpp">
+    <ClCompile Include="Engine\Math\Matrix3.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Math\Matrix4.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Math\Vector3D.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Objects\Particle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Physique\Drag.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Physique\Force.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Physique\Friction.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Physique\Gravity.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Math\Matrix3.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Math\Matrix4.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Objects\Particle.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Physique\Spring.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Math\Vector3D.cpp">
-      <Filter>Fichiers sources\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\SimpleShooter\Projectile.cpp">
-      <Filter>Fichiers sources\Game</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Game\SimpleShooter\GameEnvironment.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Dependencies\glad\src\glad.c">
+    <ClCompile Include="Game\SimpleShooter\Projectile.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EssaiOpenGL.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Circle.cpp">
@@ -71,49 +56,49 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game\SimpleShooter\Bullet.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\SimpleShooter\Cannonball.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\SimpleShooter\Fireball.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\SimpleShooter\Lazer.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\SimpleShooter\Projectile.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Math\Vector3D.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Physique\Drag.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Physique\Force.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Physique\Friction.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Physique\Gravity.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Math\Matrix3.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Math\Matrix4.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Math\Vector3D.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Objects\Particle.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Physique\Drag.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Physique\Force.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Physique\Friction.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Physique\Gravity.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Physique\Spring.h">
-      <Filter>Fichiers d%27en-tête\Engine</Filter>
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SimpleShooter\Bullet.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SimpleShooter\Cannonball.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SimpleShooter\Fireball.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Game\SimpleShooter\GameEnvironment.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SimpleShooter\Lazer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SimpleShooter\Projectile.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

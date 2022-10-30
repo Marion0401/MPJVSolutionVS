@@ -1,18 +1,35 @@
 #include <GLFW/glfw3.h>
+#include <time.h>
+#include <iostream>
+
 #include "./Game/SimpleShooter/Bullet.h"
 #include "./Game/SimpleShooter/Cannonball.h"
 #include "./Game/SimpleShooter/Fireball.h"
 #include "./Game/SimpleShooter/Lazer.h"
 #include "./Game/SimpleShooter/GameEnvironment.h"
-#include <iostream>
+#include "./Engine/Graphics/EngineGFX.h" 
+#include "./Engine/Graphics/ShaderS.h"
 
-#define CONST_GRAPHIQUE 10
-#define LEN_CIBLE 200
+// settings
+unsigned int scrWidth = 1920;
+unsigned int scrHeight = 1080;
+const char* title = "Simple Shooter";
+GLuint shaderProgram;
 
-#define W_WIDTH 1920
-#define W_HEIGHT 1080
+/*
+	Main Loop Functions 
+*/
 
-#include <time.h>
+// callback for window size change
+void framebufferSizeCallback(GLFWwindow* window, int width, int height) {
+	glViewport(0, 0, width, height);
+	scrWidth = width;
+	scrHeight = height;
+
+	// update projection matrix
+	EngineGFX.setOrthographicProjection(shaderProgram, 0, width, 0, height, 0.0f, 1.0f);
+}
+
 
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 {
@@ -47,10 +64,10 @@ void processInput(GLFWwindow* window)
 		environment->projCurrent = Fireball(Vector3D(0, 0, 0), Vector3D(-1, 0, 0), Vector3D(0, 0, 0));
 		environment->projCurrent.setVelocity(Vector3D(-fireball_velocity, 0, 0));
 		ball.setFillColor(Color::Red);
-		nom_Proj.setString("Fireball");
-		info_projectile.setString("Velocity = " + std::to_string(environment->projCurrent.getVelocity().getNorm()) + "\n"
-			"Mass = " + std::to_string(environment->projCurrent.getMass()) + "\n"
-			"Radius = " + std::to_string(environment->projCurrent.getRadius()) + "\n");
+		//nom_Proj.setString("Fireball");
+		//info_projectile.setString("Velocity = " + std::to_string(environment->projCurrent.getVelocity().getNorm()) + "\n"
+		//	"Mass = " + std::to_string(environment->projCurrent.getMass()) + "\n"
+		//	"Radius = " + std::to_string(environment->projCurrent.getRadius()) + "\n");
 
 		ball.setRadius(environment->projCurrent.getRadius() * CONST_GRAPHIQUE);
 		ball.setPosition(start_ball, 0);
@@ -61,10 +78,10 @@ void processInput(GLFWwindow* window)
 		environment->projCurrent = Bullet(Vector3D(0, 0, 0), Vector3D(-1, 0, 0), Vector3D(0, 0, 0));
 		environment->projCurrent.setVelocity(Vector3D(-bullet_velocity, 0, 0));
 		ball.setFillColor(Color::Green);
-		nom_Proj.setString("Bullet");
-		info_projectile.setString("Velocity = " + std::to_string(environment->projCurrent.getVelocity().getNorm()) + "\n"
-			"Mass = " + std::to_string(environment->projCurrent.getMass()) + "\n"
-			"Radius = " + std::to_string(environment->projCurrent.getRadius()) + "\n");
+		//nom_Proj.setString("Bullet");
+		//info_projectile.setString("Velocity = " + std::to_string(environment->projCurrent.getVelocity().getNorm()) + "\n"
+		//	"Mass = " + std::to_string(environment->projCurrent.getMass()) + "\n"
+		//	"Radius = " + std::to_string(environment->projCurrent.getRadius()) + "\n");
 
 		ball.setRadius(environment->projCurrent.getRadius() * CONST_GRAPHIQUE);
 		ball.setPosition(start_ball, 0);
@@ -75,10 +92,10 @@ void processInput(GLFWwindow* window)
 		environment->projCurrent = Cannonball(Vector3D(0, 0, 0), Vector3D(-1, 0, 0), Vector3D(0, 0, 0));
 		environment->projCurrent.setVelocity(Vector3D(-cannonball_velocity, 0, 0));
 		ball.setFillColor(Color::Blue);
-		nom_Proj.setString("Cannonball");
-		info_projectile.setString("Velocity = " + std::to_string(environment->projCurrent.getVelocity().getNorm()) + "\n"
-			"Mass = " + std::to_string(environment->projCurrent.getMass()) + "\n"
-			"Radius = " + std::to_string(environment->projCurrent.getRadius()) + "\n");
+		//nom_Proj.setString("Cannonball");
+		//info_projectile.setString("Velocity = " + std::to_string(environment->projCurrent.getVelocity().getNorm()) + "\n"
+		//	"Mass = " + std::to_string(environment->projCurrent.getMass()) + "\n"
+		//	"Radius = " + std::to_string(environment->projCurrent.getRadius()) + "\n");
 
 		ball.setRadius(environment->projCurrent.getRadius() * CONST_GRAPHIQUE);
 		ball.setPosition(start_ball, 0);
@@ -89,10 +106,10 @@ void processInput(GLFWwindow* window)
 		environment->projCurrent = Lazer(Vector3D(0, 0, 0), Vector3D(-1, 0, 0), Vector3D(0, 0, 0));
 		environment->projCurrent.setVelocity(Vector3D(-lazer_velocity, 0, 0));
 		ball.setFillColor(Color::Yellow);
-		nom_Proj.setString("Lazer");
-		info_projectile.setString("Velocity = " + std::to_string(environment->projCurrent.getVelocity().getNorm()) + "\n"
-			"Mass = " + std::to_string(environment->projCurrent.getMass()) + "\n"
-			"Radius = " + std::to_string(environment->projCurrent.getRadius()) + "\n");
+		//nom_Proj.setString("Lazer");
+		//info_projectile.setString("Velocity = " + std::to_string(environment->projCurrent.getVelocity().getNorm()) + "\n"
+		//	"Mass = " + std::to_string(environment->projCurrent.getMass()) + "\n"
+		//	"Radius = " + std::to_string(environment->projCurrent.getRadius()) + "\n");
 
 		ball.setRadius(environment->projCurrent.getRadius() * CONST_GRAPHIQUE);
 		ball.setPosition(start_ball, 0);
@@ -102,27 +119,38 @@ void processInput(GLFWwindow* window)
 
 }
 
+/*
+	Main loop
+*/
+
 int main(void)
 {
 	GLFWwindow* window;
 	GameEnvironment* environment = new GameEnvironment();
 
-	/* Initialize the library */
-	if (!glfwInit())
-		return -1;
+	// glfw: initialize and configure
+	// ------------------------------
+	EngineGFX::initGLFW(3, 3);
 
-	/* Create a windowed mode window and its OpenGL context */
-	window = glfwCreateWindow(W_WIDTH, W_HEIGHT, "Simple Shooter", glfwGetPrimaryMonitor(), NULL);
-	if (!window)
-	{
-		std::cout << "Failed to create GLFW window" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
+	// glfw window creation
+	// --------------------
+	GLFWwindow* window;
+	EngineGFX::createWindow(window, title, scrWidth, scrHeight, framebuffer_size_callback);
 	glfwSetWindowUserPointer(window, reinterpret_cast<void*>(environment));
 
-	/* Make the window's context current */
-	glfwMakeContextCurrent(window);
+	// glad: load all OpenGL function pointers
+	// ---------------------------------------
+	EngineGFX::loadGlad();
+
+	glViewport(0, 0, scrWidth, scrHeight);
+
+	// build and compile our shader program
+	// ------------------------------------
+	shaderProgram = ShaderS::genShaderProgram("./Engine/Shaders/main.vs", "./Engine/Shaders/main.fs");
+	ShaderS::setOrthographicProjection(shaderProgram, 0, scrWidth, 0, scrHeight, 0.0f, 1.0f);
+
+	// uncomment this call to draw in wireframe polygons.
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 	// Mouse
 	glfwSetMouseButtonCallback(window,mouse_button_callback);
@@ -134,17 +162,17 @@ int main(void)
     environment->projCurrent = Fireball(Vector3D(0,0,0), Vector3D(-1, 0, 0), Vector3D(0,0,0));
 
     //Setup balle qui représente le projectile
-	//CircleShape ball;
-	//bool environment->isShot = false;
-	//ball.setRadius(environment->projCurrent.getRadius() * CONST_GRAPHIQUE);
-	//ball.setFillColor(Color::Red);
-	//ball.setPosition(window.getSize().x - (environment->projCurrent.getRadius() * CONST_GRAPHIQUE)*2, 0);
+	CircleShape ball;
+	bool environment->isShot = false;
+	ball.setRadius(environment->projCurrent.getRadius() * CONST_GRAPHIQUE);
+	ball.setFillColor(Color::Red);
+	ball.setPosition(window.getSize().x - (environment->projCurrent.getRadius() * CONST_GRAPHIQUE)*2, 0);
 
 	//Setup target
-	//RectangleShape cible(sf::Vector2f(20, 100));
-	//int dir = 0;
-	//cible.setFillColor(Color::Red);
-	//cible.setPosition(10, LEN_CIBLE);
+	RectangleShape cible(sf::Vector2f(20, 100));
+	int dir = 0;
+	cible.setFillColor(Color::Red);
+	cible.setPosition(10, LEN_CIBLE);
 
     // Interface du jeu
     //sf::Font font;
