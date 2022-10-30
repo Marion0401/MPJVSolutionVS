@@ -18,41 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Engine\Math\Matrix3.cpp" />
-    <ClCompile Include="Engine\Math\Matrix4.cpp" />
-    <ClCompile Include="Engine\Math\Vector3D.cpp" />
-    <ClCompile Include="Engine\Objects\Particle.cpp" />
-    <ClCompile Include="Engine\Physique\Drag.cpp" />
-    <ClCompile Include="Engine\Physique\Force.cpp" />
-    <ClCompile Include="Engine\Physique\Friction.cpp" />
-    <ClCompile Include="Engine\Physique\Gravity.cpp" />
-    <ClCompile Include="Engine\Physique\Spring.cpp" />
-    <ClCompile Include="EssaiOpenGL.cpp" />
-    <ClCompile Include="Game\SimpleShooter\GameEnvironment.cpp" />
-    <ClCompile Include="Game\SimpleShooter\Projectile.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Engine\Math\Matrix3.h" />
-    <ClInclude Include="Engine\Math\Matrix4.h" />
-    <ClInclude Include="Engine\Math\Vector3D.h" />
-    <ClInclude Include="Engine\Objects\Particle.h" />
-    <ClInclude Include="Engine\Physique\Drag.h" />
-    <ClInclude Include="Engine\Physique\Force.h" />
-    <ClInclude Include="Engine\Physique\Friction.h" />
-    <ClInclude Include="Engine\Physique\Gravity.h" />
-    <ClInclude Include="Engine\Physique\Spring.h" />
-    <ClInclude Include="Game\SimpleShooter\GameEnvironment.h" />
-    <ClInclude Include="Game\SimpleShooter\Bullet.h" />
-    <ClInclude Include="Game\SimpleShooter\Cannonball.h" />
-    <ClInclude Include="Game\SimpleShooter\Fireball.h" />
-    <ClInclude Include="Game\SimpleShooter\Lazer.h" />
-    <ClInclude Include="Game\SimpleShooter\Projectile.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{bb271b34-3b14-4d09-a27d-22e002a520f9}</ProjectGuid>
+    <ProjectGuid>{bcbf055e-a9f5-4bcc-985d-63c7e3b26a95}</ProjectGuid>
     <RootNamespace>MGDAEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -147,15 +116,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -174,6 +138,37 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Math\Matrix3.cpp" />
+    <ClCompile Include="Engine\Math\Matrix4.cpp" />
+    <ClCompile Include="Engine\Math\Vector3D.cpp" />
+    <ClCompile Include="Engine\Objects\Particle.cpp" />
+    <ClCompile Include="Engine\Physique\Drag.cpp" />
+    <ClCompile Include="Engine\Physique\Force.cpp" />
+    <ClCompile Include="Engine\Physique\Friction.cpp" />
+    <ClCompile Include="Engine\Physique\Gravity.cpp" />
+    <ClCompile Include="Engine\Physique\Spring.cpp" />
+    <ClCompile Include="EssaiOpenGL.cpp" />
+    <ClCompile Include="Game\SimpleShooter\GameEnvironment.cpp" />
+    <ClCompile Include="Game\SimpleShooter\Projectile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Math\Matrix3.h" />
+    <ClInclude Include="Engine\Math\Matrix4.h" />
+    <ClInclude Include="Engine\Math\Vector3D.h" />
+    <ClInclude Include="Engine\Objects\Particle.h" />
+    <ClInclude Include="Engine\Physique\Drag.h" />
+    <ClInclude Include="Engine\Physique\Force.h" />
+    <ClInclude Include="Engine\Physique\Friction.h" />
+    <ClInclude Include="Engine\Physique\Gravity.h" />
+    <ClInclude Include="Engine\Physique\Spring.h" />
+    <ClInclude Include="Game\SimpleShooter\Bullet.h" />
+    <ClInclude Include="Game\SimpleShooter\Cannonball.h" />
+    <ClInclude Include="Game\SimpleShooter\Fireball.h" />
+    <ClInclude Include="Game\SimpleShooter\GameEnvironment.h" />
+    <ClInclude Include="Game\SimpleShooter\Lazer.h" />
+    <ClInclude Include="Game\SimpleShooter\Projectile.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
