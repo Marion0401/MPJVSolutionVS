@@ -1,10 +1,10 @@
 #include "./Projectile.h"
 
 float fireball_radius = 5; //in cm
-float fireball_mass = 0.005;  //in kg
+float fireball_mass = 0.005F;  //in kg
 float fireball_velocity = 10; //in m/s
-float bullet_radius = 0.3;
-float bullet_mass = 0.040;
+float bullet_radius = 0.3F;
+float bullet_mass = 0.040F;
 float bullet_velocity = 250;
 float cannonball_radius = 8;
 float cannonball_mass = 15;

@@ -33,6 +33,7 @@
     <ClCompile Include="Engine\Physique\Gravity.cpp" />
     <ClCompile Include="Engine\Physique\Rod.cpp" />
     <ClCompile Include="Engine\Physique\Spring.cpp" />
+    <ClCompile Include="Engine\Physique\World.cpp" />
     <ClCompile Include="EssaiOpenGL.cpp" />
     <ClCompile Include="Game\SimpleShooter\Projectile.cpp" />
   </ItemGroup>
@@ -51,6 +52,7 @@
     <ClInclude Include="Engine\Physique\Gravity.h" />
     <ClInclude Include="Engine\Physique\Rod.h" />
     <ClInclude Include="Engine\Physique\Spring.h" />
+    <ClInclude Include="Engine\Physique\World.h" />
     <ClInclude Include="Game\SimpleShooter\Bullet.h" />
     <ClInclude Include="Game\SimpleShooter\Cannonball.h" />
     <ClInclude Include="Game\SimpleShooter\Fireball.h" />
@@ -68,26 +70,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>

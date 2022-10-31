@@ -75,6 +75,9 @@
     <ClCompile Include="Engine\Physique\Rod.cpp">
       <Filter>Fichiers sources\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Physique\World.cpp">
+      <Filter>Fichiers sources\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\SimpleShooter\Bullet.h">
@@ -132,6 +135,9 @@
       <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Physique\Rod.h">
+      <Filter>Fichiers d%27en-tête\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Physique\World.h">
       <Filter>Fichiers d%27en-tête\Engine</Filter>
     </ClInclude>
   </ItemGroup>

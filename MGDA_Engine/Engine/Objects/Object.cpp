@@ -2,7 +2,7 @@
 
 void Object::updateResForce() {
 	Vector3D res;
-	for each (Force f in forces)
+	for (Force f : forces)
 	{
 		res += f.getAF();
 	}
@@ -10,7 +10,7 @@ void Object::updateResForce() {
 }
 
 void Object::update(float deltaTime) {
-	for each (Force f in forces)
+	for (Force f : forces)
 	{
 		f.update(deltaTime);
 	}
