@@ -18,7 +18,7 @@ public :
 		relVelocity = (d2.getVelocity() - d1.getVelocity()).getNorm() * normal;
 	}
 
-	virtual void resolveCollision();
+	virtual void resolveCollision(float deltaTime);
 };
 
 #endif
